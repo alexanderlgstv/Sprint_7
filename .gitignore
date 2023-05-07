@@ -7,5 +7,6 @@
 .idea
 
 # ignore target
-.target
+target
 
+.allure
