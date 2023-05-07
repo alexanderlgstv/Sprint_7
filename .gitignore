@@ -7,5 +7,5 @@
 .idea
 
 # ignore target
-/target/
+.target
 
