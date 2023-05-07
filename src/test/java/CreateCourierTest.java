@@ -61,8 +61,8 @@ public class CreateCourierTest {
         String bodyAnswer = response.extract().path("message");
         assertEquals("Этот логин уже используется. Попробуйте другой.", bodyAnswer);
 
-        int StatusCode = response.extract().statusCode();
-        assertEquals(SC_CONFLICT, StatusCode);
+        int statusCode = response.extract().statusCode();
+        assertEquals(SC_CONFLICT, statusCode);
     }
 
     @Test

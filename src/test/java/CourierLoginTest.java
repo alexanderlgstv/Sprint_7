@@ -116,6 +116,7 @@ public class CourierLoginTest {
     @Description("Basic test for post request to endpoint /api/v1/courier/login")
     public void courierThatNotExists() {
         ValidatableResponse loginResponse = courierClient.login(new CourierCredentials("SpaceMonkey2006", "HDDssd777"));
+        courierId = courierClient.login(CourierCredentials.from(courier)).extract().path("id");
 
         int statusCode = loginResponse.extract().statusCode();
         assertEquals(SC_NOT_FOUND, statusCode);
